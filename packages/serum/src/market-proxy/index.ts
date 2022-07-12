@@ -160,7 +160,7 @@ export class MarketProxyInstruction {
     owner: PublicKey,
     baseWallet: PublicKey,
     quoteWallet: PublicKey,
-    referrerQuoteWallet: PublicKey,
+    referrerQuoteWallet: PublicKey | null,
   ): TransactionInstruction {
     const ix = DexInstructions.settleFunds({
       market: this._market.address,
